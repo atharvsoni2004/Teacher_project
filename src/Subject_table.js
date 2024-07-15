@@ -1,3 +1,4 @@
+import React from "react"
 import Navbar from "./Navbar";
 import Slidebar from "./Slidebar";
 export default function Subjecttables()

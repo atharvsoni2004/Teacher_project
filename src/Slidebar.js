@@ -1,3 +1,4 @@
+import React from "react";
 import { Link } from "react-router-dom";
 
 export default function Slidebar() {
@@ -33,56 +34,37 @@ export default function Slidebar() {
               Dashboard
             </Link>
             <div className="nav-item dropdown">
-              <Link
-                to="#"
-                className="nav-link dropdown-toggle"
-                data-bs-toggle="dropdown"
-              >
+              <Link to="/Course_table" className="nav-link "
+                data-bs-toggle="dropdown">
                 <i className="fa fa-laptop me-2" />
                 Courses
               </Link>
-              <div className="dropdown-menu bg-transparent border-0">
-                <Link to="Course_tables.html" className="dropdown-item">
-                  Course Management
-                </Link>
-                <Link to="typography.html" className="dropdown-item">
-                  Add Courses
-                </Link>
-              </div>
             </div>
             <div className="nav-item dropdown">
-              <Link
-                to="#"
-                className="nav-link dropdown-toggle"
-                data-bs-toggle="dropdown"
-              >
+              <Link to="/Batche_table" className="nav-link"
+                data-bs-toggle="dropdown">
                 <i className="fa fa-laptop me-2" />
                 Batches
               </Link>
 
               <div className="nav-item dropdown">
-                <Link
-                  to="#"
-                  className="nav-link dropdown-toggle"
-                  data-bs-toggle="dropdown" >
-                  <Link className="fa fa-laptop me-2" />
-                  Subject
-                </Link>
+              <Link to="/Subject_tables"
+                className="nav-link "
+                data-bs-toggle="dropdown">
+                <i className="fa fa-laptop me-2" />
+                Subject
+              </Link>
                 
                 <div className="nav-item dropdown">
-                  <Link to="#"
-                    className="nav-link dropdown-toggle"
+                  <Link to="/Teacher_tables" className="nav-link"
                     data-bs-toggle="dropdown">
                     <i className="fa fa-laptop me-2" />
                     Teacher
                   </Link>
                 
                   <div className="nav-item dropdown">
-                    <Link
-                      to="#"
-                      className="nav-link dropdown-toggle"
-                      data-bs-toggle="dropdown"
-                    >
+                    <Link  to="/Lecture_table" className="nav-link "
+                      data-bs-toggle="dropdown">
                       <i className="fa fa-laptop me-2" />
                       Lecture
                     </Link>
@@ -91,11 +73,11 @@ export default function Slidebar() {
                       <i className="fa fa-chart-bar me-2" />
                       Payouts
                     </Link>
-                    <Link to="signin.html" className="nav-item nav-link">
+                    <Link to="/SignIn" className="nav-item nav-link">
                       <i className="fa fa-chart-bar me-2" />
                       Sign In
                     </Link>
-                    <Link to="signup.html" className="nav-item nav-link">
+                    <Link to="/SignUp" className="nav-item nav-link">
                       <i className="fa fa-chart-bar me-2" />
                       Sign Up
                     </Link>
