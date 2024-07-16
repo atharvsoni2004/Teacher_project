@@ -1,20 +1,26 @@
-import React from "react"
-import { Link } from "react-router-dom"
+import React from "react";
+import { Link } from "react-router-dom";
+
+function ShowSlidebar() {
+  alert('hii');
+  document.body.classList.toggle('toggle-slidebar');
+}
+
 export default function Navbar() {
   return (
     <>
       {/* Hello world */}
       <div className="content">
         {/* Navbar Start */}
-        <nav className="navbar navbar-expand bg-light navbar-light sticky-top px-4 py-0" >
+        <nav className="navbar navbar-expand bg-light navbar-light sticky-top px-4 py-0">
           <Link to="index.html" className="navbar-brand d-flex d-lg-none me-4">
             <h2 className="text-primary mb-0">
               <i className="fa fa-hashtag" />
             </h2>
           </Link>
-          <Link to="#" className="sidebar-toggler flex-shrink-0">
-            <i className="fa fa-bars" />
-          </Link>
+          <button className="sidebar-toggler flex-shrink-0" onClick={ShowSlidebar}>
+            <i className="fa fa-bars"></i>
+          </button>
           <form className="d-none d-md-flex ms-4">
             <input
               className="form-control border-0"
@@ -42,7 +48,7 @@ export default function Navbar() {
                       style={{ width: 40, height: 40 }}
                     />
                     <div className="ms-2">
-                      <h6 className="fw-normal mb-0">Jhon send you a message</h6>
+                      <h6 className="fw-normal mb-0">John send you a message</h6>
                       <small>15 minutes ago</small>
                     </div>
                   </div>
@@ -57,7 +63,7 @@ export default function Navbar() {
                       style={{ width: 40, height: 40 }}
                     />
                     <div className="ms-2">
-                      <h6 className="fw-normal mb-0">Jhon send you a message</h6>
+                      <h6 className="fw-normal mb-0">John send you a message</h6>
                       <small>15 minutes ago</small>
                     </div>
                   </div>
@@ -72,14 +78,14 @@ export default function Navbar() {
                       style={{ width: 40, height: 40 }}
                     />
                     <div className="ms-2">
-                      <h6 className="fw-normal mb-0">Jhon send you a message</h6>
+                      <h6 className="fw-normal mb-0">John send you a message</h6>
                       <small>15 minutes ago</small>
                     </div>
                   </div>
                 </Link>
                 <hr className="dropdown-divider" />
                 <Link to="#" className="dropdown-item text-center">
-                  See all message
+                  See all messages
                 </Link>
               </div>
             </div>
@@ -90,7 +96,7 @@ export default function Navbar() {
                 data-bs-toggle="dropdown"
               >
                 <i className="fa fa-bell me-lg-2" />
-                <span className="d-none d-lg-inline-flex">Notificatin</span>
+                <span className="d-none d-lg-inline-flex">Notification</span>
               </Link>
               <div className="dropdown-menu dropdown-menu-end bg-light border-0 rounded-0 rounded-bottom m-0">
                 <Link to="#" className="dropdown-item">
@@ -144,5 +150,5 @@ export default function Navbar() {
         {/* Navbar End */}
       </div>
     </>
-  )
+  );
 }
