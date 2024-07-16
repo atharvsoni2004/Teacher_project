@@ -1,6 +1,7 @@
 import React from "react"
 import Navbar from "./Navbar"
 import Slidebar from "./Slidebar"
+import { Link } from "react-router-dom"
 export default function Coursetable() {
     return (
         <>
@@ -10,8 +11,8 @@ export default function Coursetable() {
                 <h2 className="text-center mt-1 ">Course Details</h2>
                 <div class="d-flex flex-row-reverse ">
 
-                    <div class="mb-3 "><button className="btn btn-primary">
-                     + Add</button></div>
+                    <div class="mb-3 "><Link to='/Add_Courses'><button className="btn btn-primary">
+                    + Add</button></Link></div>
                 </div>
                 <div className="table-responsive bg-white" >
                     <table className="table table-bordered table-hover">
@@ -22,8 +23,8 @@ export default function Coursetable() {
                                 <th scope="col">Fees</th>
                                 <th scope="col">Duration</th>
                                 <th scope="col">Description</th>
-                                <th scope="col">Edit</th>
-                                <th scope="col">Delete</th>
+                                <th scope="col" colSpan={2} className="text-center">
+                                Action</th>
                             </tr>
                         </thead>
                         <tbody>

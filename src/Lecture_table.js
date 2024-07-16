@@ -1,6 +1,7 @@
 import React from "react"
 import Navbar from "./Navbar";
 import Slidebar from "./Slidebar";
+import { Link } from "react-router-dom";
 
 export default function Lecturetable() {
     return (<>
@@ -9,8 +10,12 @@ export default function Lecturetable() {
         <div className="container mt-1 me-1">
             <h2 className="text-center mt-1 ">Lecture Details</h2>
             <div class="d-flex flex-row-reverse ">
-                <div class="mb-3 "><button className="btn btn-primary">
-                    + Add</button></div>
+                <div class="mb-3 ">
+                <Link to='/Add_Lectures'>
+                <button className="btn btn-primary">
+                + Add</button>
+                </Link>
+               </div>
             </div>
             <div className="table-responsive bg-white">
                 <table className="table table-bordered table-hover">

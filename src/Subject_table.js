@@ -1,6 +1,7 @@
 import React from "react"
 import Navbar from "./Navbar";
 import Slidebar from "./Slidebar";
+import { Link } from "react-router-dom";
 export default function Subjecttables()
 {
     return ( <>
@@ -9,8 +10,9 @@ export default function Subjecttables()
         <div className="container mt-1 me-1">
             <h2 className="text-center mt-1 ">Subject Details</h2>
             <div class="d-flex flex-row-reverse ">
-                <div class="mb-3 "><button className="btn btn-primary">
-                    + Add</button></div>
+               <Link to='/Add_Subjects'> 
+               <div class="mb-3 "><button className="btn btn-primary">
+               + Add</button></div></Link>
             </div>
             <div className="table-responsive bg-white">
                 <table className="table table-bordered table-hover">
@@ -20,8 +22,8 @@ export default function Subjecttables()
                             <th scope="col">Course ID</th>
                             <th scope="col">Title</th>
                             <th scope="col">Rate</th>
-                            <th scope="col">Edit</th>
-                            <th scope="col">Delete</th>
+                            <th scope="col" colSpan={2} className="text-center">
+                            Action</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -31,7 +33,7 @@ export default function Subjecttables()
                             <td>Mathematics</td>
                             <td>$50</td>
                             <td>
-                                <button className="btn btn-warning btn-sm">Edit</button>
+                                <button className="btn btn-warning btn-sm ">Edit</button>
                             </td>
                             <td>
                                 <button className="btn btn-danger btn-sm">Delete</button>

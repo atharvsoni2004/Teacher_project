@@ -7,7 +7,7 @@ export default function Slidebar() {
       {/* Sidebar Start */}
       <div className="sidebar pe-4 pb-3">
         <nav className="navbar bg-light navbar-light">
-          <Link to="index.html" className="navbar-brand mx-4 mb-3">
+          <Link to="/" className="navbar-brand mx-4 mb-3"> {/* Changed line 8 */}
             <h3 className="text-primary">
               <i className="fa fa-hashtag me-2" />
               DASHMIN
@@ -29,66 +29,56 @@ export default function Slidebar() {
             </div>
           </div>
           <div className="navbar-nav w-100">
-            <Link to="index.html" className="nav-item nav-link active">
+            <Link to="/" className="nav-item nav-link active"> {/* Changed line 24 */}
               <i className="fa fa-tachometer-alt me-2" />
               Dashboard
             </Link>
             <div className="nav-item dropdown">
-              <Link to="/Course_table" className="nav-link "
-                data-bs-toggle="dropdown">
+              <Link to="/Course_table" className="nav-link"> {/* Changed line 29 */}
                 <i className="fa fa-laptop me-2" />
                 Courses
               </Link>
             </div>
             <div className="nav-item dropdown">
-              <Link to="/Batche_table" className="nav-link"
-                data-bs-toggle="dropdown">
+              <Link to="/Batches_table" className="nav-link"> {/* Changed line 34 */}
                 <i className="fa fa-laptop me-2" />
                 Batches
               </Link>
-
-              <div className="nav-item dropdown">
-              <Link to="/Subject_tables"
-                className="nav-link "
-                data-bs-toggle="dropdown">
-                <i className="fa fa-laptop me-2" />
-                Subject
-              </Link>
-                
-                <div className="nav-item dropdown">
-                  <Link to="/Teacher_tables" className="nav-link"
-                    data-bs-toggle="dropdown">
-                    <i className="fa fa-laptop me-2" />
-                    Teacher
-                  </Link>
-                
-                  <div className="nav-item dropdown">
-                    <Link  to="/Lecture_table" className="nav-link "
-                      data-bs-toggle="dropdown">
-                      <i className="fa fa-laptop me-2" />
-                      Lecture
-                    </Link>
-                   
-                    <Link to="chart.html" className="nav-item nav-link">
-                      <i className="fa fa-chart-bar me-2" />
-                      Payouts
-                    </Link>
-                    <Link to="/SignIn" className="nav-item nav-link">
-                      <i className="fa fa-chart-bar me-2" />
-                      Sign In
-                    </Link>
-                    <Link to="/SignUp" className="nav-item nav-link">
-                      <i className="fa fa-chart-bar me-2" />
-                      Sign Up
-                    </Link>
-                  </div>
-                </div>
-              </div>
             </div>
+            <div className="nav-item dropdown">
+              <Link to="/Subject_tables" className="nav-link"> {/* Changed line 39 */}
+                <i className="fa fa-laptop me-2" />
+                Subjects
+              </Link>
+            </div>
+            <div className="nav-item dropdown">
+              <Link to="/Teacher_tables" className="nav-link"> {/* Changed line 44 */}
+                <i className="fa fa-laptop me-2" />
+                Teachers
+              </Link>
+            </div>
+            <div className="nav-item dropdown">
+              <Link to="/Lecture_table" className="nav-link"> {/* Changed line 49 */}
+                <i className="fa fa-laptop me-2" />
+                Lectures
+              </Link>
+            </div>
+            <Link to="/chart.html" className="nav-item nav-link"> {/* Changed line 53 */}
+              <i className="fa fa-chart-bar me-2" />
+              Payouts
+            </Link>
+            <Link to="/SignIn" className="nav-item nav-link"> {/* Changed line 57 */}
+              <i className="fa fa-chart-bar me-2" />
+              Sign In
+            </Link>
+            <Link to="/SignUp" className="nav-item nav-link"> {/* Changed line 61 */}
+              <i className="fa fa-chart-bar me-2" />
+              Sign Up
+            </Link>
           </div>
         </nav>
       </div>
       {/* Sidebar End */}
     </>
-  )
+  );
 }

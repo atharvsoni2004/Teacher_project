@@ -1,6 +1,7 @@
 import React from "react"
 import Navbar from "./Navbar";
 import Slidebar from "./Slidebar";
+import { Link } from "react-router-dom";
 
 export default function Teachertable() {
     return (<>
@@ -9,8 +10,9 @@ export default function Teachertable() {
         <div className="container mt-1 me-1">
             <h2 className="text-center mt-1 ">Teacher Details</h2>
             <div class="d-flex flex-row-reverse ">
-                <div class="mb-3 "><button className="btn btn-primary">
+                <Link to = '/Add_Faculties'><div class="mb-3 "><button className="btn btn-primary">
                     + Add</button></div>
+                </Link>
             </div>
             <div className="table-responsive bg-white">
                 <table className="table table-bordered table-hover">
@@ -23,8 +25,8 @@ export default function Teachertable() {
                             <th scope="col">Qualification</th>
                             <th scope="col">Experience</th>
                             <th scope="col">Photo</th>
-                            <th scope="col">Edit</th>
-                            <th scope="col">Delete</th>
+                            <th scope="col" colSpan={2} className="text-center">
+                            Action</th>
                         </tr>
                     </thead>
                     <tbody>
